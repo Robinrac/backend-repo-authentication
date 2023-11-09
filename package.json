@@ -1,0 +1,33 @@
+{
+  "name": "backend-repo-authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/service.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src/service.js",
+    "dev": "nodemon ./src/service.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robinrac/backend-repo-authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robinrac/backend-repo-authentication/issues"
+  },
+  "homepage": "https://github.com/Robinrac/backend-repo-authentication#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
