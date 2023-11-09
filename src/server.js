@@ -13,8 +13,9 @@ app.use(async (req, res, next) => {
     const token = authHeader && authHeader.split(' ')[1];
 
     if (!token) return res.status(403).send('Access Denied');
+    
     try {
-        const response = await fetch('http://localhost:3001', { //Add verify token endpoint from auth repo
+        const response = await fetch('http://localhost:3001/auth/tokenVerify', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
