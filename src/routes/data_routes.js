@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   if (!token) return res.status(401).send('Access Denied');
 
   try {
-    const verified = jwt.verify(token, 'secretKey');
+    const verified = jwt.verify(token, process.env.JWTSecret);
     if (verified.role === 'admin') {
       res.json({ data: 'Secret data for admin!' });
     } else {
